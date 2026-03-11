@@ -4,6 +4,7 @@ import starlight from "@astrojs/starlight";
 
 export default defineConfig({
   site: "https://premix-labs.github.io",
+  base: "/graitec-powerpack-rebar-tutorial-guide",
   integrations: [
     starlight({
       title: "PowerPack Rebar Book",
@@ -19,7 +20,7 @@ export default defineConfig({
         {
           icon: "github",
           label: "GitHub",
-          href: "https://github.com/withastro/starlight",
+          href: "https://github.com/premix-labs/graitec-powerpack-rebar-tutorial-guide",
         },
       ],
     }),
