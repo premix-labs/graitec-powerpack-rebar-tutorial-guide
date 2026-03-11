@@ -1,0 +1,78 @@
+---
+title: PowerPack Rebar Book
+description: คู่มือภาษาไทยสำหรับเริ่มใช้งาน GRAITEC PowerPack Rebar ใน Revit
+template: splash
+hero:
+  tagline: เรียน PowerPack Rebar แบบเริ่มจากศูนย์ ตั้งแต่เตรียมโมเดล ใส่เหล็กคาน เสา พื้น ผนัง และฐานราก ไปจนถึงงานช่องเปิด การแก้ชุดเหล็ก และการทำ detail, schedule, report รวมถึงการตั้งระบบ
+  actions:
+    - text: เริ่มอ่านคู่มือ
+      link: guide/01-overview-and-setup/
+      icon: right-arrow
+      variant: primary
+---
+
+import { Card, CardGrid } from "@astrojs/starlight/components";
+
+## สิ่งที่มีในเล่มตอนนี้
+
+เล่มนี้ตั้งต้นจากคู่มือ `powerpack-rebar-basic-guide.md` และแยกออกเป็นหลายบทเพื่อให้ขยายต่อได้ง่ายเป็นรายหัวข้อ
+
+<CardGrid stagger>
+  <Card title="เตรียมโมเดล" icon="seti:settings">
+    เช็ก host, มุมมอง, Detail Level และ Rebar Cover ก่อนเริ่มใช้ PowerPack Rebar
+  </Card>
+  <Card title="ใส่เหล็กคาน" icon="seti:book">
+    เหล็กล่าง เหล็กบน เหล็กปลอก และแนวทางคัดลอกชุดเหล็กไปยังคานตัวอื่น
+  </Card>
+  <Card title="ใส่เหล็กเสา" icon="seti:list-unordered">
+    เหล็กยืน เหล็กยืนเสริม เหล็กคาด เหล็กปลอก และบทต่อเรื่องการต่อเหล็กในเสา
+  </Card>
+  <Card title="ใส่เหล็กพื้น" icon="seti:grid">
+    ใช้ Auto Fabrics for Slabs เป็นจุดเริ่มต้นสำหรับงานพื้น
+  </Card>
+  <Card title="งานผนังและฐานราก" icon="seti:layout">
+    ฝึก wall rebar, footing rebar และการแก้ข้อความเตือนที่เจอบ่อยกับ host แผ่นหนา
+  </Card>
+  <Card title="งานปลายทาง" icon="seti:table">
+    ต่อจากโมเดลไปยัง openings, edit rebar, detail, schedule, report, roles และ clone drawings
+  </Card>
+  <Card title="ดูปุ่มให้เป็น" icon="seti:terminal">
+    สรุปว่าเครื่องมือแต่ละปุ่มในแท็บ PowerPack Rebar ใช้ทำอะไร และควรเริ่มจากปุ่มไหนก่อน
+  </Card>
+</CardGrid>
+
+## สารบัญปัจจุบัน
+
+1. [ภาพรวมและการเตรียมไฟล์](guide/01-overview-and-setup/)
+2. [สร้างโมเดลตัวอย่าง](guide/02-create-sample-model/)
+3. [ใส่เหล็กคาน](guide/03-beam-main-bars/)
+4. [คัดลอกเหล็กคาน](guide/04-copy-beam-rebar/)
+5. [ใส่เหล็กเสา](guide/05-column-rebar/)
+6. [เหล็กเดือยและเหล็กต่อเสา](guide/06-column-starter-bars/)
+7. [การต่อทาบและคัปเปลอร์ในเสา](guide/07-column-lap-splice-and-coupler/)
+8. [ใส่เหล็กพื้น](guide/08-slab-rebar/)
+9. [การมองเห็นและเริ่มใหม่](guide/09-visibility-and-reset/)
+10. [Workflow และการแก้ปัญหา](guide/10-workflow-and-troubleshooting/)
+11. [ค่าตัวอย่างสำหรับฝึก](guide/13-practice-values/)
+12. [ใส่เหล็กผนัง](guide/12-wall-rebar/)
+13. [ใส่เหล็กฐานราก](guide/15-footing-rebar/)
+14. [เสริมเหล็กรอบช่องเปิด](guide/16-openings/)
+15. [แก้ชุดเหล็กหลังสร้างแล้ว](guide/17-editing-rebar-sets/)
+16. [Design Templates Design Status และ Configurations](guide/19-templates-status-and-configurations/)
+17. [Assign Rebar Roles และ Clone Drawings](guide/21-rebar-roles-and-clone-drawings/)
+18. [ทำ Detail ตารางเหล็ก และรายงาน](guide/18-detailing-schedule-and-report/)
+19. [Warning ที่เจอบ่อยและวิธีแก้แบบเร็ว](guide/14-common-warnings/)
+20. [เครื่องมือ PowerPack Rebar ใช้อะไรบ้าง](guide/11-powerpack-tools-reference/)
+21. [เริ่มต้นกับ Hybrid Rebars](guide/20-hybrid-rebars/)
+22. [ต่างเวอร์ชัน ไม่มีชนิดเหล็ก หรือไม่มี Cover Type ต้องทำอย่างไร](guide/22-version-and-environment-decisions/)
+
+## แนวทางใช้เล่มนี้
+
+- ถ้าเพิ่งเริ่ม ให้เริ่มจากบทพื้นฐานก่อน
+- ถ้าจำชื่อปุ่มไม่ได้ ให้เปิดบท "เครื่องมือ PowerPack Rebar ใช้อะไรบ้าง" ควบคู่กับการฝึก
+- ถ้าจะเริ่มฝึกงานผนัง ให้เปิดบท "ใส่เหล็กผนัง" คู่กับบทค่าตัวอย่าง
+- ถ้าจะไปต่อจากงานโมเดล ให้เริ่มอ่านหมวด footing, openings, editing และ detailing ตามลำดับ
+- ถ้าจะใช้ในทีมจริง ให้ต่อด้วยหมวด templates, configurations, roles, และ clone drawings
+- ถ้าต้องการขยายต่อ ตอนนี้หมวดเสามีบทต่อเรื่อง `Starter Bars`, `Lap Splice`, และ `Coupler` แล้ว
+- ถ้าเมนูในเครื่องคุณไม่ตรงกับตัวอย่าง หรือไม่มี `Rebar Type` / `Rebar Cover` ตามที่หนังสือใช้ ให้เปิดบทตัดสินใจเรื่องเวอร์ชันและสภาพแวดล้อมควบคู่ไปด้วย
+- เนื้อหาในเล่มนี้เหมาะกับการฝึก workflow ในโปรแกรม ไม่ใช่การแทนแบบวิศวกรรมของโครงการจริง
