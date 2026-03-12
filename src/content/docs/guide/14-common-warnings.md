@@ -47,7 +47,7 @@ sidebar:
 
 ## 44. Warning: Rebar is placed completely outside of its host
 
-นี่คือ warning ที่เจอบ่อยมาก โดยเฉพาะงานผนังและบางครั้งในพื้น/คานที่ปลายงอซับซ้อน
+นี่คือ warning ที่เจอบ่อยมาก โดยเฉพาะงานผนัง และบางครั้งใน footing, supported element, หรือเหล็กปลายงอ
 
 ### เช็กแบบเร็ว
 
@@ -64,6 +64,33 @@ sidebar:
 3. ปิด hook ด้วยค่า `0` เพื่อทดสอบ
 4. เพิ่ม offset เฉพาะด้านที่มีปัญหาทีละน้อย
 5. ใช้ `Show` หรือ `Expand` เพื่อดูว่าเตือนเส้นไหน
+
+### กรณี `Links` ของ supported element ลอยอยู่เหนือ host
+
+ให้เช็กเพิ่มดังนี้
+
+1. `Offset` ของ `Supported Element Transversal > Links` สูงเกินไปหรือไม่
+2. `Lateral left / right / rear / front` ดันปลอกออกนอก host หรือไม่
+3. supported element มีขนาดเล็กกว่าค่าที่ใส่อยู่หรือไม่
+
+ลำดับแก้ที่ปลอดภัยคือ
+
+1. ลด `Offset` ลงเป็น `0 mm`
+2. คง `L1/L2/L3/L4` ไว้ที่ `40 mm` ก่อน
+3. เช็กใน `3D` อีกครั้ง
+
+### กรณี `Binders Bars` แล้วขึ้น warning
+
+ถ้า warning มาจาก `Binders Bars Along X` หรือ `Binders Bars Along Y` ให้คิดไว้ก่อนว่า binder set นี้อาจไม่เหมาะกับ footing/pedestal ตัวนั้น
+
+วิธีตัดสินใจเร็วที่สุดคือ
+
+1. ใช้ `Show` ดูว่าเตือนเส้นไหน
+2. ถ้าเป็น binder bar ที่ลอยนอก host ให้ลบ `Binders` ออกก่อน
+3. คงไว้เฉพาะ `Pad - Bars`, `Supported Element Longitudinal`, และ `Links`
+
+> [!WARNING]
+> ใน footing พื้นฐาน `Binders` ไม่ใช่ชุดที่ต้องใส่ทุกครั้ง ถ้าใส่แล้วเกิด warning ให้เอาออกก่อน ไม่ต้องฝืนแก้จนเสียเวลา
 
 ---
 
@@ -136,4 +163,5 @@ sidebar:
 
 - ปัญหาส่วนใหญ่ไม่ได้มาจากปุ่ม แต่เกิดจาก `host`, `cover`, `offset`, `view`
 - ถ้าเจอ warning ให้หาว่าเป็น "ทั้งชุด" หรือ "แค่บางเส้น"
+- ใน footing ถ้า `Binders` พัง ให้ถอยกลับไปใช้แค่ `Pad - Bars`, `Supported Element Longitudinal`, และ `Links`
 - อย่าเริ่มจากค่าซับซ้อน ให้เริ่มจากค่ากลาง ๆ ก่อนเสมอ
